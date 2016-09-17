@@ -30,31 +30,20 @@ html {
 :root {
   font-size: 14px;
   overflow-x: hidden;
-  color: black; }
+  color: #0f0f0f; }
 
 h1 {
-  font: 1.28rem/2.14rem "Johnston100-Medium", sans-serif; }
+  font: 1.28rem/1.42rem "Johnston100-Medium", sans-serif; }
 
-h2 {
+h2, legend {
   font: 1.14rem/1.42rem "Johnston100-Medium", sans-serif; }
 
-p, .support {
+p, .support, #show p, label {
   font: 1rem/1.42rem "Johnston100-Regular", sans-serif; }
 
 .support {
   font-family: Johnston100-Thin;
   color: #747474; }
-
-.button {
-  border-radius: 2px;
-  border: 0.125em solid black;
-  color: black;
-  display: inline-block;
-  font: 1em "Johnston100-Regular", sans-serif;
-  margin-bottom: 3em;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none; }
 
 section, .sec01, .sec02 {
   padding: 10% 5%; }
@@ -65,15 +54,59 @@ section, .sec01, .sec02 {
 .sec02 {
   background-color: lightgreen; }
 
-article {
+article, form {
   padding: 2% !important; }
 
 .card {
   background-color: white;
   border-radius: 3px;
-  padding: 20px;
+  padding: 10px;
   width: auto; }
   .card .img {
     background-color: lightgrey;
     height: 150px;
     width: auto; }
+  .card h1, .card h2, .card p, .card .support, .card #show p, #show .card p {
+    padding: 0 1em; }
+
+#button {
+  border: none !important;
+  background: #4DC1C4 !important;
+  border-radius: 2px !important;
+  color: white !important;
+  display: inline-block !important;
+  font: Normal 1em "Johnston100-Regular", sans-serif !important;
+  margin-bottom: 3em !important;
+  outline: none !important;
+  padding: 10px 20px !important;
+  text-align: center !important;
+  text-decoration: none !important; }
+
+p label, .support label, #show p label {
+  color: #747474;
+  display: block;
+  font: 1em "Johnston100-Thin", sans-serif; }
+
+p input, .support input, #show p input, #show input {
+  border: none;
+  border-bottom: 1px solid #747474;
+  height: 44px;
+  width: 100%;
+  transition: border 0.3s; }
+
+input:focus,
+input.focus,
+#show input:focus,
+#show input.focus {
+  border-bottom: solid 1px #4DC1C4;
+  outline: none; }
+
+#show {
+  top: -1rem;
+  position: relative;
+  display: inline-block; }
+
+#show .support, #show p {
+  position: absolute;
+  right: 0;
+  top: 0; }

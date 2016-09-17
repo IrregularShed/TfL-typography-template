@@ -34,40 +34,36 @@ html { box-sizing: border-box; }
   src: url('font/Johnston100-Medium.otf')  format('opentype'), /* Safari, Android, iOS */
 }
 
+// Variables
+$tflBlue: #353A8C;
+$accentColor: #4DC1C4;
+$primaryTxt: #0f0f0f;
+$secondaryTxt: #747474;
+$disableTxt: #A4A4A4;
+$txtRootSize: 14px;
+
 :root {
-    font-size: 14px;
+    font-size: $txtRootSize;
     overflow-x: hidden;
-    color: black;
+    color: $primaryTxt;
 }
 
 h1 {
-    font: 1.28rem/2.14rem "Johnston100-Medium", sans-serif;
+    font: 1.28rem/1.42rem "Johnston100-Medium", sans-serif;
 }
 
-h2 {
+h2, legend {
     font: 1.14rem/1.42rem "Johnston100-Medium", sans-serif;
 }
 
-p {
+p, label {
     font: 1rem/1.42rem "Johnston100-Regular", sans-serif;
 }
 
 .support {
     @extend p;
     font-family: Johnston100-Thin;
-    color: #747474;
-}
-
-.button {
-    border-radius: 2px;
-    border: 0.125em solid black;
-    color: black;
-    display: inline-block;
-    font: 1em "Johnston100-Regular", sans-serif;
-    margin-bottom: 3em;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
+    color: $secondaryTxt;
 }
 
 section {
@@ -84,7 +80,7 @@ section {
     background-color: lightgreen;
 }
 
-article {
+article, form {
     padding: 2% !important;
 }
 
@@ -92,7 +88,7 @@ article {
     background-color: white;
     border-radius: 3px;
     // border: 0.125em solid rgba(111, 111, 111, 0.3);
-    padding: 20px;
+    padding: 10px;
     width: auto;
 
     .img {
@@ -100,4 +96,58 @@ article {
         height: 150px;
         width: auto;
     }
+
+    h1, h2, p {
+        padding: 0 1em;
+    }
+}
+
+#button {
+    border: none !important;
+    background: $accentColor !important;
+    border-radius: 2px !important;
+    color: white !important;
+    display: inline-block !important;
+    font: Normal 1em "Johnston100-Regular", sans-serif !important;
+    margin-bottom: 3em !important;
+    outline: none !important;
+    padding: 10px 20px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+// Form
+p label {
+    color: $secondaryTxt;
+    display: block;
+    font: 1em "Johnston100-Thin", sans-serif;
+}
+
+p input, #show input {
+    border: none;
+    border-bottom: 1px solid $secondaryTxt;
+    height: 44px;
+    width: 100%;
+    transition: border 0.3s;
+}
+
+input:focus,
+input.focus,
+#show input:focus,
+#show input.focus {
+    border-bottom: solid 1px $accentColor;
+    outline: none;
+}
+
+#show {
+    top: -1rem;
+    position: relative;
+    display: inline-block;
+}
+
+#show p {
+    @extend p;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
