@@ -1,0 +1,103 @@
+html { box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.cf:before, .container:after {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+/* IE 6/7 */
+.cf {
+  zoom: 1; }
+
+@font-face {
+    font-family: 'Johnston100-Hairline';
+    src: url('font/Johnston100-Hairline.otf')  format('opentype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Johnston100-Thin';
+  src: url('font/Johnston100-Thin.otf')  format('opentype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Johnston100-Regular';
+  src: url('font/Johnston100-Regular.otf')  format('opentype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Johnston100-Medium';
+  src: url('font/Johnston100-Medium.otf')  format('opentype'), /* Safari, Android, iOS */
+}
+
+:root {
+    font-size: 14px;
+    overflow-x: hidden;
+    color: black;
+}
+
+h1 {
+    font: 1.28rem/2.14rem "Johnston100-Medium", sans-serif;
+}
+
+h2 {
+    font: 1.14rem/1.42rem "Johnston100-Medium", sans-serif;
+}
+
+p {
+    font: 1rem/1.42rem "Johnston100-Regular", sans-serif;
+}
+
+.support {
+    @extend p;
+    font-family: Johnston100-Thin;
+    color: #747474;
+}
+
+.button {
+    border-radius: 2px;
+    border: 0.125em solid black;
+    color: black;
+    display: inline-block;
+    font: 1em "Johnston100-Regular", sans-serif;
+    margin-bottom: 3em;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+section {
+    padding: 10% 5%;
+}
+
+.sec01 {
+    @extend section;
+    background-color: white;
+}
+
+.sec02 {
+    @extend section;
+    background-color: lightgreen;
+}
+
+article {
+    padding: 2% !important;
+}
+
+.card {
+    background-color: white;
+    border-radius: 3px;
+    // border: 0.125em solid rgba(111, 111, 111, 0.3);
+    padding: 20px;
+    width: auto;
+
+    .img {
+        background-color: lightgrey;
+        height: 150px;
+        width: auto;
+    }
+}
