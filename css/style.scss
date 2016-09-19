@@ -52,6 +52,10 @@ h1 {
     font: 1.28rem/1.42rem "Johnston100-Medium", sans-serif;
 }
 
+.hairline {
+    font: 1.28rem/1.42rem "Johnston100-Hairline", sans-serif;
+}
+
 h2, legend {
     font: 1.14rem/1.42rem "Johnston100-Medium", sans-serif;
 }
@@ -64,6 +68,15 @@ p, label {
     @extend p;
     font-family: Johnston100-Thin;
     color: $secondaryTxt;
+}
+
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+ color: $primaryTxt;
+ text-decoration: none;
 }
 
 section {
@@ -80,6 +93,16 @@ section {
     background-color: lightgreen;
 }
 
+.sec03 {
+    @extend section;
+    background-color: white;
+}
+
+.sec04 {
+    @extend section;
+    background-color: #f3f3f3;
+}
+
 article, form {
     padding: 2% !important;
 }
@@ -93,8 +116,8 @@ article, form {
 
     .img {
         background-color: lightgrey;
-        height: 150px;
-        width: auto;
+        width: 100%;
+        height: 200px;
     }
 
     h1, h2, p {
@@ -103,7 +126,7 @@ article, form {
 }
 
 #button {
-    border: none !important;
+    border: 2px solid $accentColor!important;
     background: $accentColor !important;
     border-radius: 2px !important;
     color: white !important;
@@ -114,6 +137,14 @@ article, form {
     padding: 10px 20px !important;
     text-align: center !important;
     text-decoration: none !important;
+    transition-duration: 0.3s !important;
+}
+
+#button:hover {
+    border: 2px solid $accentColor!important;
+    background: white !important;
+    border-radius: 2px !important;
+    color: $accentColor !important;
 }
 
 // Form
@@ -150,4 +181,35 @@ input.focus,
     position: absolute;
     right: 0;
     top: 0;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+#navBar {
+    background: $tflBlue;
+    color: white;
+    display: flex;
+    justify-content:  center;
+    width: 100%;
+
+    div {
+        padding: 10px;
+
+        a,
+        a:active,
+        a:visited,
+        a:link {
+            color: inherit;
+            transition: .3s;
+        }
+
+        a:hover {
+            color: inherit;
+            opacity: .6;
+        }
+    }
+
 }

@@ -35,6 +35,9 @@ html {
 h1 {
   font: 1.28rem/1.42rem "Johnston100-Medium", sans-serif; }
 
+.hairline {
+  font: 1.28rem/1.42rem "Johnston100-Hairline", sans-serif; }
+
 h2, legend {
   font: 1.14rem/1.42rem "Johnston100-Medium", sans-serif; }
 
@@ -45,7 +48,15 @@ p, .support, #show p, label {
   font-family: Johnston100-Thin;
   color: #747474; }
 
-section, .sec01, .sec02 {
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+  color: #0f0f0f;
+  text-decoration: none; }
+
+section, .sec01, .sec02, .sec03, .sec04 {
   padding: 10% 5%; }
 
 .sec01 {
@@ -53,6 +64,12 @@ section, .sec01, .sec02 {
 
 .sec02 {
   background-color: lightgreen; }
+
+.sec03 {
+  background-color: white; }
+
+.sec04 {
+  background-color: #f3f3f3; }
 
 article, form {
   padding: 2% !important; }
@@ -64,13 +81,13 @@ article, form {
   width: auto; }
   .card .img {
     background-color: lightgrey;
-    height: 150px;
-    width: auto; }
+    width: 100%;
+    height: 200px; }
   .card h1, .card h2, .card p, .card .support, .card #show p, #show .card p {
     padding: 0 1em; }
 
 #button {
-  border: none !important;
+  border: 2px solid #4DC1C4 !important;
   background: #4DC1C4 !important;
   border-radius: 2px !important;
   color: white !important;
@@ -80,7 +97,14 @@ article, form {
   outline: none !important;
   padding: 10px 20px !important;
   text-align: center !important;
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  transition-duration: 0.3s !important; }
+
+#button:hover {
+  border: 2px solid #4DC1C4 !important;
+  background: white !important;
+  border-radius: 2px !important;
+  color: #4DC1C4 !important; }
 
 p label, .support label, #show p label {
   color: #747474;
@@ -110,3 +134,25 @@ input.focus,
   position: absolute;
   right: 0;
   top: 0; }
+
+nav {
+  margin: 0;
+  padding: 0; }
+
+#navBar {
+  background: #353A8C;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  #navBar div {
+    padding: 10px; }
+    #navBar div a,
+    #navBar div a:active,
+    #navBar div a:visited,
+    #navBar div a:link {
+      color: inherit;
+      transition: .3s; }
+    #navBar div a:hover {
+      color: inherit;
+      opacity: .6; }
