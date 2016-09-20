@@ -16,33 +16,85 @@ html {
   zoom: 1; }
 
 @font-face {
+  font-family: 'NJFont-Light';
+  src: url("../font/NJFont-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'NJFont-Book';
+  src: url("../font/NJFont-Book.ttf") format("truetype"); }
+@font-face {
+  font-family: 'NJFont-BookBold';
+  src: url("../font/NJFont-BookBold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'NJFont-Medium';
+  src: url("../font/NJFont-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: 'NJFont-Bold';
+  src: url("../font/NJFont-Bold.ttf") format("truetype"); }
+.nLight {
+  font-family: 'NJFont-Light'; }
+
+.nBook {
+  font-family: 'NJFont-Book'; }
+
+.nBookBold {
+  font-family: 'NJFont-BookBold'; }
+
+.nMedium {
+  font-family: 'NJFont-Medium'; }
+
+.nBold {
+  font-family: 'NJFont-Bold'; }
+
+@font-face {
   font-family: 'Johnston100-Hairline';
-  src: url("font/Johnston100-Hairline.otf") format("opentype"); }
+  src: url("../font/Johnston100-Hairline.otf") format("opentype"); }
 @font-face {
   font-family: 'Johnston100-Thin';
-  src: url("font/Johnston100-Thin.otf") format("opentype"); }
+  src: url("../font/Johnston100-Thin.otf") format("opentype"); }
+@font-face {
+  font-family: 'Johnston100-Light';
+  src: url("../font/Johnston100-Light.otf") format("opentype"); }
 @font-face {
   font-family: 'Johnston100-Regular';
-  src: url("font/Johnston100-Regular.otf") format("opentype"); }
+  src: url("../font/Johnston100-Regular.otf") format("opentype"); }
 @font-face {
   font-family: 'Johnston100-Medium';
-  src: url("font/Johnston100-Medium.otf") format("opentype"); }
+  src: url("../font/Johnston100-Medium.otf") format("opentype"); }
+.jHairline {
+  font-family: 'Johnston100-Hairline'; }
+
+.jLight {
+  font-family: 'Johnston100-Light'; }
+
+.jThin {
+  font-family: 'Johnston100-Thin'; }
+
+.jRegular {
+  font-family: 'Johnston100-Regular'; }
+
+.jMedium {
+  font-family: 'Johnston100-Medium'; }
+
 :root {
   font-size: 14px;
   overflow-x: hidden;
   color: #0f0f0f; }
 
 h1 {
-  font: 1.28rem/1.42rem "Johnston100-Medium", sans-serif; }
-
-.hairline {
-  font: 1.28rem/1.42rem "Johnston100-Hairline", sans-serif; }
+  font-size: 1.28rem;
+  line-height: 1.42rem; }
 
 h2, legend {
-  font: 1.14rem/1.42rem "Johnston100-Medium", sans-serif; }
+  font-size: 1.14rem;
+  line-height: 1.42rem; }
 
 p, .support, #show p, label {
-  font: 1rem/1.42rem "Johnston100-Regular", sans-serif; }
+  font-size: 1rem;
+  line-height: 1.42rem; }
+
+.smallFonts {
+  font-size: 0.75rem;
+  line-height: 1.42rem; }
 
 .support {
   font-family: Johnston100-Thin;
@@ -56,17 +108,18 @@ a:visited {
   color: #0f0f0f;
   text-decoration: none; }
 
-section, .sec01, .sec02, .sec03, .sec04 {
+section, .sec01,
+.sec03,
+.sec05, .sec02, .sec04 {
   padding: 10% 5%; }
 
-.sec01 {
+.sec01,
+.sec03,
+.sec05 {
   background-color: white; }
 
 .sec02 {
   background-color: lightgreen; }
-
-.sec03 {
-  background-color: white; }
 
 .sec04 {
   background-color: #f3f3f3; }
