@@ -76,136 +76,73 @@ html {
   font-family: 'Johnston100-Medium'; }
 
 :root {
-  font-size: 14px;
-  overflow-x: hidden;
+  font-size: 16px;
+  overflow-x: hidden; }
+
+body {
+  position: relative;
+  margin-top: 80px; }
+
+main {
+  font-family: 'Johnston100-Light';
   color: #0f0f0f; }
 
+h1, h2,
+h3, h4,
+p, .smallFont {
+  margin: 0 0 1rem 0;
+  line-height: auto; }
+
 h1 {
-  font-size: 1.28rem;
-  line-height: 1.42rem; }
+  font-size: 3rem; }
 
-h2, legend {
-  font-size: 1.14rem;
-  line-height: 1.42rem; }
+h2 {
+  font-size: 2.5rem; }
 
-p, .support, #show p, label {
-  font-size: 1rem;
-  line-height: 1.42rem; }
+h3 {
+  font-size: 2rem; }
 
-.smallFonts {
-  font-size: 0.75rem;
-  line-height: 1.42rem; }
+h4 {
+  font-size: 1.5rem; }
 
-.support {
-  font-family: Johnston100-Thin;
-  color: #747474; }
+p {
+  font-size: 1rem; }
 
-a,
-a:active,
-a:hover,
 a:link,
-a:visited {
+a:visited,
+a:hover,
+a:active {
   color: #0f0f0f;
   text-decoration: none; }
 
-section, .sec01,
-.sec03,
-.sec05, .sec02, .sec04 {
-  padding: 10% 5%; }
-
-.sec01,
-.sec03,
-.sec05 {
-  background-color: white; }
-
-.sec02 {
-  background-color: lightgreen; }
-
-.sec04 {
-  background-color: #f3f3f3; }
-
-article, form {
-  padding: 2% !important; }
-
-.card {
-  background-color: white;
-  border-radius: 3px;
-  padding: 10px;
-  width: auto; }
-  .card .img {
-    background-color: lightgrey;
-    width: 100%;
-    height: 200px; }
-  .card h1, .card h2, .card p, .card .support, .card #show p, #show .card p {
-    padding: 0 1em; }
-
-#button {
-  border: 2px solid #4DC1C4 !important;
-  background: #4DC1C4 !important;
-  border-radius: 2px !important;
-  color: white !important;
-  display: inline-block !important;
-  font: Normal 1em "Johnston100-Regular", sans-serif !important;
-  margin-bottom: 3em !important;
-  outline: none !important;
-  padding: 10px 20px !important;
-  text-align: center !important;
-  text-decoration: none !important;
-  transition-duration: 0.3s !important; }
-
-#button:hover {
-  border: 2px solid #4DC1C4 !important;
-  background: white !important;
-  border-radius: 2px !important;
-  color: #4DC1C4 !important; }
-
-p label, .support label, #show p label {
-  color: #747474;
-  display: block;
-  font: 1em "Johnston100-Thin", sans-serif; }
-
-p input, .support input, #show p input, #show input {
-  border: none;
-  border-bottom: 1px solid #747474;
-  height: 44px;
-  width: 100%;
-  transition: border 0.3s; }
-
-input:focus,
-input.focus,
-#show input:focus,
-#show input.focus {
-  border-bottom: solid 1px #4DC1C4;
-  outline: none; }
-
-#show {
-  top: -1rem;
-  position: relative;
-  display: inline-block; }
-
-#show .support, #show p {
-  position: absolute;
-  right: 0;
-  top: 0; }
-
 nav {
+  width: 100%;
+  background: white;
+  border: none;
+  border-bottom: 1px solid #A4A4A4;
+  position: fixed;
+  top: 0; }
+  nav ul {
+    padding: 20px 10px;
+    text-align: center; }
+    nav ul li {
+      display: inline;
+      padding: 0 10px; }
+
+section {
+  padding: 10%; }
+
+ul {
   margin: 0;
   padding: 0; }
+  ul .list {
+    border: none;
+    border-bottom: 1px solid #A4A4A4;
+    list-style: none;
+    padding: 20px; }
 
-#navBar {
-  background: #353A8C;
-  color: white;
-  display: flex;
-  justify-content: center;
+.img {
+  background: #A4A4A4;
+  height: 12rem;
+  margin: 0 0 1rem 0;
   width: 100%; }
-  #navBar div {
-    padding: 10px; }
-    #navBar div a,
-    #navBar div a:active,
-    #navBar div a:visited,
-    #navBar div a:link {
-      color: inherit;
-      transition: .3s; }
-    #navBar div a:hover {
-      color: inherit;
-      opacity: .6; }
