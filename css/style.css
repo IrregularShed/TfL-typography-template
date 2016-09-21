@@ -16,64 +16,39 @@ html {
   zoom: 1; }
 
 @font-face {
-  font-family: 'NJFont-Light';
-  src: url("../font/NJFont-Light.ttf") format("truetype"); }
+  font-family: "Johnston100W03-Medium";
+  src: url("../fonts/Johnston100W03-Medium.eot?#iefix");
+  src: url("../fonts/Johnston100W03-Medium.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Medium.woff2") format("woff2"), url("../fonts/Johnston100W03-Medium.woff") format("woff"), url("../fonts/Johnston100W03-Medium.ttf") format("truetype"), url("../fonts/Johnston100W03-Medium.svg#f2c7a047-47a8-4198-bc26-e121630c6582") format("svg"); }
 @font-face {
-  font-family: 'NJFont-Book';
-  src: url("../font/NJFont-Book.ttf") format("truetype"); }
+  font-family: "Johnston100W03-Thin";
+  src: url("../fonts/Johnston100W03-Thin.eot?#iefix");
+  src: url("../fonts/Johnston100W03-Thin.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Thin.woff2") format("woff2"), url("../fonts/Johnston100W03-Thin.woff") format("woff"), url("../fonts/Johnston100W03-Thin.ttf") format("truetype"), url("../fonts/Johnston100W03-Thin.svg#97f5a5f4-a86e-4574-92a7-be90680c7f78") format("svg"); }
 @font-face {
-  font-family: 'NJFont-BookBold';
-  src: url("../font/NJFont-BookBold.ttf") format("truetype"); }
+  font-family: "Johnston100W03-Light";
+  src: url("../fonts/Johnston100W03-Light.eot?#iefix");
+  src: url("../fonts/Johnston100W03-Light.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Light.woff2") format("woff2"), url("../fonts/Johnston100W03-Light.woff") format("woff"), url("../fonts/Johnston100W03-Light.ttf") format("truetype"), url("../fonts/Johnston100W03-Light.svg#453553e8-40f5-4385-88dd-e161c39f67a6") format("svg"); }
 @font-face {
-  font-family: 'NJFont-Medium';
-  src: url("../font/NJFont-Medium.ttf") format("truetype"); }
+  font-family: "Johnston100W03-Hairline";
+  src: url("../fonts/Johnston100W03-Hairline.eot?#iefix");
+  src: url("../fonts/Johnston100W03-Hairline.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Hairline.woff2") format("woff2"), url("../fonts/Johnston100W03-Hairline.woff") format("woff"), url("../fonts/Johnston100W03-Hairline.ttf") format("truetype"), url("../fonts/Johnston100W03-Hairline.svg#4c655e41-9ccc-4463-b531-4b6ea7c26a4f") format("svg"); }
 @font-face {
-  font-family: 'NJFont-Bold';
-  src: url("../font/NJFont-Bold.ttf") format("truetype"); }
-.nLight {
-  font-family: 'NJFont-Light'; }
-
-.nBook {
-  font-family: 'NJFont-Book'; }
-
-.nBookBold {
-  font-family: 'NJFont-BookBold'; }
-
-.nMedium {
-  font-family: 'NJFont-Medium'; }
-
-.nBold {
-  font-family: 'NJFont-Bold'; }
-
-@font-face {
-  font-family: 'Johnston100-Hairline';
-  src: url("../font/Johnston100-Hairline.otf") format("opentype"); }
-@font-face {
-  font-family: 'Johnston100-Thin';
-  src: url("../font/Johnston100-Thin.otf") format("opentype"); }
-@font-face {
-  font-family: 'Johnston100-Light';
-  src: url("../font/Johnston100-Light.otf") format("opentype"); }
-@font-face {
-  font-family: 'Johnston100-Regular';
-  src: url("../font/Johnston100-Regular.otf") format("opentype"); }
-@font-face {
-  font-family: 'Johnston100-Medium';
-  src: url("../font/Johnston100-Medium.otf") format("opentype"); }
+  font-family: "Johnston100W03-Regular";
+  src: url("../fonts/Johnston100W03-Regular.eot?#iefix");
+  src: url("../fonts/Johnston100W03-Regular.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Regular.woff2") format("woff2"), url("../fonts/Johnston100W03-Regular.woff") format("woff"), url("../fonts/Johnston100W03-Regular.ttf") format("truetype"), url("../fonts/Johnston100W03-Regular.svg#d9380b87-961e-4bec-ae2c-09e17c56a3f6") format("svg"); }
 .jHairline {
-  font-family: 'Johnston100-Hairline'; }
+  font-family: 'Johnston100W03-Hairline'; }
 
 .jLight {
-  font-family: 'Johnston100-Light'; }
+  font-family: 'Johnston100W03-Light'; }
 
 .jThin {
-  font-family: 'Johnston100-Thin'; }
+  font-family: 'Johnston100W03-Thin'; }
 
 .jRegular {
-  font-family: 'Johnston100-Regular'; }
+  font-family: 'Johnston100W03-Regular'; }
 
 .jMedium {
-  font-family: 'Johnston100-Medium'; }
+  font-family: 'Johnston100W03-Medium'; }
 
 :root {
   font-size: 16px;
@@ -84,7 +59,7 @@ body {
   margin-top: 80px; }
 
 main {
-  font-family: 'Johnston100-Light';
+  font-family: 'Johnston100W03-Light';
   color: #0f0f0f; }
 
 h1, h2,
