@@ -114,7 +114,7 @@ $primaryTxt: #0f0f0f;
 $secondaryTxt: #747474;
 $disableTxt: #A4A4A4;
 $txtRootSize: 16px;
-$lineHeight: auto;
+$lineHeight: 1.5rem;
 
 :root {
     font-size: $txtRootSize;
@@ -177,7 +177,6 @@ nav {
 }
 
 //Main
-
 section {
     padding: 10%;
 }
