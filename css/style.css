@@ -16,6 +16,10 @@ html {
   zoom: 1; }
 
 @font-face {
+  font-family: "Johnston100W03-Hairline";
+  src: url("../fonts/Johnston100W03-Hairline.eot?#iefix");
+  src: url("../fonts/Johnston100W03-Hairline.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Hairline.woff2") format("woff2"), url("../fonts/Johnston100W03-Hairline.woff") format("woff"), url("../fonts/Johnston100W03-Hairline.ttf") format("truetype"), url("../fonts/Johnston100W03-Hairline.svg#4c655e41-9ccc-4463-b531-4b6ea7c26a4f") format("svg"); }
+@font-face {
   font-family: "Johnston100W03-Medium";
   src: url("../fonts/Johnston100W03-Medium.eot?#iefix");
   src: url("../fonts/Johnston100W03-Medium.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Medium.woff2") format("woff2"), url("../fonts/Johnston100W03-Medium.woff") format("woff"), url("../fonts/Johnston100W03-Medium.ttf") format("truetype"), url("../fonts/Johnston100W03-Medium.svg#f2c7a047-47a8-4198-bc26-e121630c6582") format("svg"); }
@@ -28,26 +32,22 @@ html {
   src: url("../fonts/Johnston100W03-Light.eot?#iefix");
   src: url("../fonts/Johnston100W03-Light.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Light.woff2") format("woff2"), url("../fonts/Johnston100W03-Light.woff") format("woff"), url("../fonts/Johnston100W03-Light.ttf") format("truetype"), url("../fonts/Johnston100W03-Light.svg#453553e8-40f5-4385-88dd-e161c39f67a6") format("svg"); }
 @font-face {
-  font-family: "Johnston100W03-Hairline";
-  src: url("../fonts/Johnston100W03-Hairline.eot?#iefix");
-  src: url("../fonts/Johnston100W03-Hairline.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Hairline.woff2") format("woff2"), url("../fonts/Johnston100W03-Hairline.woff") format("woff"), url("../fonts/Johnston100W03-Hairline.ttf") format("truetype"), url("../fonts/Johnston100W03-Hairline.svg#4c655e41-9ccc-4463-b531-4b6ea7c26a4f") format("svg"); }
-@font-face {
   font-family: "Johnston100W03-Regular";
   src: url("../fonts/Johnston100W03-Regular.eot?#iefix");
   src: url("../fonts/Johnston100W03-Regular.eot?#iefix") format("eot"), url("../fonts/Johnston100W03-Regular.woff2") format("woff2"), url("../fonts/Johnston100W03-Regular.woff") format("woff"), url("../fonts/Johnston100W03-Regular.ttf") format("truetype"), url("../fonts/Johnston100W03-Regular.svg#d9380b87-961e-4bec-ae2c-09e17c56a3f6") format("svg"); }
-.jHairline {
+.H {
   font-family: 'Johnston100W03-Hairline'; }
 
-.jLight {
+.L {
   font-family: 'Johnston100W03-Light'; }
 
-.jThin {
+.T {
   font-family: 'Johnston100W03-Thin'; }
 
-.jRegular {
+.R {
   font-family: 'Johnston100W03-Regular'; }
 
-.jMedium {
+.M {
   font-family: 'Johnston100W03-Medium'; }
 
 :root {
@@ -56,19 +56,26 @@ html {
 
 body {
   position: relative;
-  margin-top: 80px; }
+  margin: 100px 0;
+  vertical-align: baseline; }
 
 main {
+  max-width: 960px;
   font-family: 'Johnston100W03-Light';
-  color: #0f0f0f; }
+  color: #0f0f0f;
+  margin-right: auto;
+  margin-left: auto; }
 
 h1, h2,
 h3, h4,
-p, button,
-ul li,
-ol li {
-  margin: 0 0 1rem 0;
+p,
+#show p {
+  font-weight: normal;
+  margin: 0 0 1.25rem 0;
   line-height: auto; }
+
+blockquote {
+  font-size: 3.5rem; }
 
 h1 {
   font-size: 3rem; }
@@ -82,44 +89,114 @@ h3 {
 h4 {
   font-size: 1.5rem; }
 
-p {
+p, #show p {
   font-size: 1rem; }
 
+a,
 a:link,
-a:visited,
+a:visited {
+  color: #4DC1C4;
+  text-decoration: none; }
+
 a:hover,
 a:active {
-  color: #0f0f0f;
-  text-decoration: none; }
+  text-decoration: underline; }
 
 nav {
   width: 100%;
   background: white;
   border: none;
-  border-bottom: 1px solid #A4A4A4;
+  border-top: 1px solid #A4A4A4;
   position: fixed;
-  top: 0; }
+  bottom: 0; }
   nav ul {
-    padding: 20px 10px;
-    text-align: center; }
+    list-style: none;
+    padding: 10px; }
     nav ul li {
-      display: inline;
+      display: inline-block;
       padding: 0 10px; }
+      nav ul li a,
+      nav ul li a:link,
+      nav ul li a:visited {
+        color: #0f0f0f;
+        text-decoration: none; }
+      nav ul li a:hover,
+      nav ul li a:active {
+        text-decoration: underline; }
 
 section {
-  padding: 10%; }
+  padding: 0 10%; }
 
 ul {
   margin: 0;
-  padding: 0; }
+  padding: 0 0 1.25rem 0; }
   ul .list {
     border: none;
     border-bottom: 1px solid #A4A4A4;
     list-style: none;
-    padding: 20px; }
+    padding: 1rem; }
+  ul li:last-child {
+    border: none; }
 
 .img {
   background: #A4A4A4;
   height: 12rem;
   margin: 0 0 1rem 0;
   width: 100%; }
+
+#button {
+  width: 100%;
+  justify-content: center;
+  border: 2px solid #4DC1C4 !important;
+  background: #4DC1C4 !important;
+  border-radius: 2px !important;
+  color: white !important;
+  display: inline-block !important;
+  outline: none !important;
+  padding: 10px 40px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  transition-duration: 0.3s !important; }
+
+#button:hover {
+  border: 2px solid #4DC1C4 !important;
+  background: white !important;
+  border-radius: 2px !important;
+  color: #4DC1C4 !important; }
+
+p label, #show p label {
+  color: #747474;
+  display: block;
+  font: 1em "Johnston100-Thin", sans-serif; }
+
+p input, #show p input, #show input {
+  border: none;
+  border-bottom: 1px solid #747474;
+  height: 44px;
+  width: 100%;
+  transition: border 0.3s; }
+
+input:focus,
+input.focus,
+#show input:focus,
+#show input.focus {
+  border-bottom: solid 1px #4DC1C4;
+  outline: none; }
+
+#show {
+  top: -1rem;
+  position: relative;
+  display: inline-block; }
+
+#show p {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.comparison {
+  padding: 1rem 0; }
+
+.img {
+  width: 100%;
+  padding-bottom: 50%;
+  background: #A4A4A4; }
