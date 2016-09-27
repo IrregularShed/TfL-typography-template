@@ -56,12 +56,10 @@ html {
 
 body {
   position: relative;
-  margin: 100px 0;
-  vertical-align: baseline; }
+  font-family: 'Johnston100W03-Light'; }
 
 main {
   max-width: 960px;
-  font-family: 'Johnston100W03-Light';
   color: #0f0f0f;
   margin-right: auto;
   margin-left: auto; }
@@ -69,13 +67,11 @@ main {
 h1, h2,
 h3, h4,
 p,
-#show p {
+#show p, blockquote {
   font-weight: normal;
-  margin: 0 0 1.25rem 0;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
   line-height: auto; }
-
-blockquote {
-  font-size: 3.5rem; }
 
 h1 {
   font-size: 3rem; }
@@ -90,7 +86,12 @@ h4 {
   font-size: 1.5rem; }
 
 p, #show p {
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+.small {
+  font-size: 0.75rem;
+  color: #747474; }
 
 a,
 a:link,
@@ -100,51 +101,10 @@ a:visited {
 
 a:hover,
 a:active {
-  text-decoration: underline; }
+  text-decoration: underline;
+  opacity: 0.75; }
 
-nav {
-  width: 100%;
-  background: white;
-  border: none;
-  border-top: 1px solid #A4A4A4;
-  position: fixed;
-  bottom: 0; }
-  nav ul {
-    list-style: none;
-    padding: 10px; }
-    nav ul li {
-      display: inline-block;
-      padding: 0 10px; }
-      nav ul li a,
-      nav ul li a:link,
-      nav ul li a:visited {
-        color: #0f0f0f;
-        text-decoration: none; }
-      nav ul li a:hover,
-      nav ul li a:active {
-        text-decoration: underline; }
-
-section {
-  padding: 0 10%; }
-
-ul {
-  margin: 0;
-  padding: 0 0 1.25rem 0; }
-  ul .list {
-    border: none;
-    border-bottom: 1px solid #A4A4A4;
-    list-style: none;
-    padding: 1rem; }
-  ul li:last-child {
-    border: none; }
-
-.img {
-  background: #A4A4A4;
-  height: 12rem;
-  margin: 0 0 1rem 0;
-  width: 100%; }
-
-#button {
+#button, #btNav {
   width: 100%;
   justify-content: center;
   border: 2px solid #4DC1C4 !important;
@@ -158,16 +118,87 @@ ul {
   text-decoration: none !important;
   transition-duration: 0.3s !important; }
 
-#button:hover {
+#button:hover, #btNav:hover {
   border: 2px solid #4DC1C4 !important;
   background: white !important;
   border-radius: 2px !important;
   color: #4DC1C4 !important; }
 
+nav {
+  display: none;
+  width: 100%;
+  background: white;
+  border: none;
+  border-top: 1px solid #A4A4A4;
+  position: fixed;
+  bottom: 0; }
+  nav ul {
+    list-style: none;
+    padding: 20px 0 0; }
+    nav ul li {
+      display: inline-block;
+      padding: 0 10px; }
+      nav ul li a,
+      nav ul li a:link,
+      nav ul li a:visited {
+        color: #0f0f0f;
+        text-decoration: none; }
+      nav ul li a:hover,
+      nav ul li a:active {
+        text-decoration: underline; }
+
+#btNav {
+  border: 2px solid blue !important;
+  background: blue !important;
+  padding: 10px 10px !important;
+  width: auto;
+  position: fixed;
+  bottom: 40px;
+  right: 40px; }
+
+#btNav:hover {
+  border: 2px solid blue !important;
+  background: white !important;
+  border-radius: 2px !important;
+  color: blue !important; }
+
+#btReset {
+  color: blue; }
+
+section {
+  padding: 0 10%;
+  margin-bottom: 3rem; }
+
+.crumb {
+  list-style: none;
+  margin-bottom: 1.25rem;
+  padding-top: 3rem; }
+  .crumb li {
+    display: inline-block;
+    padding-right: 10px; }
+    .crumb li a,
+    .crumb li a:link,
+    .crumb li a:visited {
+      color: #0f0f0f;
+      text-decoration: none; }
+    .crumb li a:hover,
+    .crumb li a:active {
+      text-decoration: underline; }
+
+ul {
+  margin: 0;
+  padding: 0 0 1.25rem 0; }
+  ul .list {
+    border: none;
+    border-bottom: 1px solid #A4A4A4;
+    list-style: none;
+    padding: 1rem; }
+  ul li:last-child {
+    border: none; }
+
 p label, #show p label {
   color: #747474;
-  display: block;
-  font: 1em "Johnston100-Thin", sans-serif; }
+  display: block; }
 
 p input, #show p input, #show input {
   border: none;
@@ -193,10 +224,21 @@ input.focus,
   right: 0;
   top: 0; }
 
-.comparison {
-  padding: 1rem 0; }
-
 .img {
   width: 100%;
   padding-bottom: 50%;
+  margin-bottom: .5rem;
   background: #A4A4A4; }
+
+.comparison {
+  padding-top: 1.25rem; }
+
+footer {
+  background-color: black;
+  padding: 2% 0; }
+  footer ul {
+    list-style: none; }
+    footer ul li {
+      border: none !important;
+      color: white;
+      padding: 1rem 0; }

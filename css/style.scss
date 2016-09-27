@@ -66,6 +66,8 @@ $secondaryTxt: #747474;
 $disableTxt: #A4A4A4;
 $txtRootSize: 16px;
 $lineHeight: auto;
+$marginBottom: 1.25rem;
+$marginSection: 3rem;
 
 :root {
     font-size: $txtRootSize;
@@ -74,13 +76,11 @@ $lineHeight: auto;
 
 body {
     position: relative;
-    margin: 100px 0;
-    vertical-align: baseline;
+    font-family: 'Johnston100W03-Light';
 }
 
 main {
     max-width: 960px;
-    font-family: 'Johnston100W03-Light';
     color: $primaryTxt;
     margin-right: auto;
     margin-left: auto;
@@ -88,16 +88,14 @@ main {
 
 h1, h2,
 h3, h4,
-p {
+p, blockquote {
     font-weight: normal;
-    margin: 0 0 1.25rem 0;
+    margin-top: 0;
+    margin-bottom: $marginBottom;
     line-height: $lineHeight;
 }
 
-blockquote {
-    font-size: 3.5rem;
-}
-
+// h1 — small
 h1 {
     font-size: 3rem;
 }
@@ -112,8 +110,14 @@ h4 {
 }
 p {
     font-size: 1rem;
+    line-height: 1.5rem;
+}
+.small {
+    font-size: 0.75rem;
+    color: $secondaryTxt;
 }
 
+// Hyperlinks
 a,
 a:link,
 a:visited {
@@ -123,67 +127,10 @@ a:visited {
 a:hover,
 a:active {
  text-decoration: underline;
+ opacity: 0.75;
 }
 
-// Nav
-nav {
-    width: 100%;
-    background: white;
-    border: none;
-    border-top: 1px solid $disableTxt;
-    position: fixed;
-    bottom: 0;
-
-    ul {
-        list-style: none;
-        padding: 10px;
-
-        li {
-            display:inline-block;
-            padding: 0 10px;
-
-            a,
-            a:link,
-            a:visited {
-                color: $primaryTxt;
-                text-decoration: none;
-            }
-
-            a:hover,
-            a:active {
-             text-decoration: underline;
-            }
-        }
-    }
-}
-
-//Main
-section {
-    padding: 0 10%;
-}
-
-ul{
-    margin: 0;
-    padding: 0 0 1.25rem 0;
-
-    .list {
-        border: none;
-        border-bottom: 1px solid $disableTxt;
-        list-style: none;
-        padding: 1rem;
-    }
-    li:last-child {
-        border: none;
-    }
-}
-
-.img {
-    background: $disableTxt;
-    height: 12rem;
-    margin: 0 0 1rem 0;
-    width: 100%;
-}
-// Button
+// Buttons
 #button {
     width: 100%;
     justify-content: center;
@@ -206,11 +153,108 @@ ul{
     color: $accentColor !important;
 }
 
+// Menu
+nav {
+    display: none;
+    width: 100%;
+    background: white;
+    border: none;
+    border-top: 1px solid $disableTxt;
+    position: fixed;
+    bottom: 0;
+
+    ul {
+        list-style: none;
+        padding: 20px 0 0;
+
+        li {
+            display:inline-block;
+            padding: 0 10px;
+
+            a,
+            a:link,
+            a:visited {
+                color: $primaryTxt;
+                text-decoration: none;
+            }
+
+            a:hover,
+            a:active {
+             text-decoration: underline;
+            }
+        }
+    }
+}
+#btNav {
+    @extend #button;
+    border: 2px solid blue !important;
+    background: blue !important;
+    padding: 10px 10px !important;
+    width: auto;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+#btNav:hover {
+    border: 2px solid blue !important;
+    background: white !important;
+    border-radius: 2px !important;
+    color: blue !important;
+}
+
+#btReset {
+    color: blue
+}
+
+//Main
+section {
+    padding: 0 10%;
+    margin-bottom: $marginSection;
+}
+
+.crumb {
+    list-style: none;
+    margin-bottom: $marginBottom;
+    padding-top: 3rem;
+
+    li {
+        display:inline-block;
+        padding-right: 10px;
+
+        a,
+        a:link,
+        a:visited {
+            color: $primaryTxt;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active {
+         text-decoration: underline;
+        }
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 1.25rem 0;
+
+    .list {
+        border: none;
+        border-bottom: 1px solid $disableTxt;
+        list-style: none;
+        padding: 1rem;
+    }
+
+    li:last-child {
+        border: none;
+    }
+}
+
 // Form
 p label {
     color: $secondaryTxt;
     display: block;
-    font: 1em "Johnston100-Thin", sans-serif;
 }
 
 p input, #show input {
@@ -242,15 +286,28 @@ input.focus,
     top: 0;
 }
 
-
-.comparison {
-    padding: 1rem 0;
-}
-
-.img  {
+// Elements
+.img {
   width: 100%;
   padding-bottom: 50%;
+  margin-bottom: .5rem;
   background: $disableTxt;
-  // background: url(../img/img-lg.jpeg);
+}
 
+.comparison {
+    padding-top: $marginBottom;
+}
+
+footer {
+    background-color: black;
+    padding: 2% 0;
+
+    ul {
+        list-style: none;
+        li {
+            border: none !important;
+            color: white;
+            padding: 1rem 0;
+        }
+    }
 }
