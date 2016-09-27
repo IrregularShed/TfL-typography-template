@@ -57,7 +57,7 @@ $(function() {
   $('#p').on('click', function(e) {
     $("p").removeClass().addClass(weights[pIndex]);
     $("#pText").html(weights[pIndex]);
-    if (pIndex === weights.length) {
+    if (pIndex === weights.length-1) {
         pIndex = 0;
     } else {
       pIndex++;

@@ -88,7 +88,8 @@ main {
 
 h1, h2,
 h3, h4,
-p, blockquote {
+p, blockquote,
+.small {
     font-weight: normal;
     margin-top: 0;
     margin-bottom: $marginBottom;
@@ -266,24 +267,9 @@ p input, #show input {
 }
 
 input:focus,
-input.focus,
-#show input:focus,
-#show input.focus {
+input.focus {
     border-bottom: solid 1px $accentColor;
     outline: none;
-}
-
-#show {
-    top: -1rem;
-    position: relative;
-    display: inline-block;
-}
-
-#show p {
-    @extend p;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 // Elements
@@ -300,14 +286,15 @@ input.focus,
 
 footer {
     background-color: black;
-    padding: 2% 0;
+    color: white;
+    padding: 5% 0;
 
     ul {
         list-style: none;
+
         li {
             border: none !important;
-            color: white;
-            padding: 1rem 0;
+            padding: 0 1rem;
         }
     }
 }

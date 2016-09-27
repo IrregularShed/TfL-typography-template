@@ -66,8 +66,8 @@ main {
 
 h1, h2,
 h3, h4,
-p,
-#show p, blockquote {
+p, blockquote,
+.small {
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 1.25rem;
@@ -85,7 +85,7 @@ h3 {
 h4 {
   font-size: 1.5rem; }
 
-p, #show p {
+p {
   font-size: 1rem;
   line-height: 1.5rem; }
 
@@ -196,11 +196,11 @@ ul {
   ul li:last-child {
     border: none; }
 
-p label, #show p label {
+p label {
   color: #747474;
   display: block; }
 
-p input, #show p input, #show input {
+p input, #show input {
   border: none;
   border-bottom: 1px solid #747474;
   height: 44px;
@@ -208,21 +208,9 @@ p input, #show p input, #show input {
   transition: border 0.3s; }
 
 input:focus,
-input.focus,
-#show input:focus,
-#show input.focus {
+input.focus {
   border-bottom: solid 1px #4DC1C4;
   outline: none; }
-
-#show {
-  top: -1rem;
-  position: relative;
-  display: inline-block; }
-
-#show p {
-  position: absolute;
-  right: 0;
-  top: 0; }
 
 .img {
   width: 100%;
@@ -235,10 +223,10 @@ input.focus,
 
 footer {
   background-color: black;
-  padding: 2% 0; }
+  color: white;
+  padding: 5% 0; }
   footer ul {
     list-style: none; }
     footer ul li {
       border: none !important;
-      color: white;
-      padding: 1rem 0; }
+      padding: 0 1rem; }
