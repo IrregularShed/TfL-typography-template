@@ -131,13 +131,16 @@ nav {
   border: none;
   border-top: 1px solid #A4A4A4;
   position: fixed;
-  bottom: 0; }
+  bottom: 0;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto; }
   nav ul {
-    list-style: none;
-    padding: 20px 0 0; }
+    list-style: none; }
     nav ul li {
-      display: inline-block;
-      padding: 0 10px; }
+      padding: 10px;
+      width: 50px;
+      display: inline-block; }
       nav ul li a,
       nav ul li a:link,
       nav ul li a:visited {
@@ -145,7 +148,7 @@ nav {
         text-decoration: none; }
       nav ul li a:hover,
       nav ul li a:active {
-        text-decoration: underline; }
+        background: yellow; }
 
 #btNav {
   border: 2px solid blue !important;
@@ -162,7 +165,8 @@ nav {
   border-radius: 2px !important;
   color: blue !important; }
 
-#btReset {
+.btReset {
+  font-size: 2rem;
   color: blue; }
 
 section {
@@ -200,7 +204,7 @@ p label {
   color: #747474;
   display: block; }
 
-p input, #show input {
+input {
   border: none;
   border-bottom: 1px solid #747474;
   height: 44px;

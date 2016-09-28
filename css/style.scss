@@ -163,14 +163,17 @@ nav {
     border-top: 1px solid $disableTxt;
     position: fixed;
     bottom: 0;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
 
     ul {
         list-style: none;
-        padding: 20px 0 0;
 
         li {
-            display:inline-block;
-            padding: 0 10px;
+            padding: 10px;
+            width: 50px;
+            display: inline-block;
 
             a,
             a:link,
@@ -181,7 +184,7 @@ nav {
 
             a:hover,
             a:active {
-             text-decoration: underline;
+                background: yellow;
             }
         }
     }
@@ -203,7 +206,8 @@ nav {
     color: blue !important;
 }
 
-#btReset {
+.btReset {
+    font-size: 2rem;
     color: blue
 }
 
@@ -258,7 +262,7 @@ p label {
     display: block;
 }
 
-p input, #show input {
+input {
     border: none;
     border-bottom: 1px solid $secondaryTxt;
     height: 44px;

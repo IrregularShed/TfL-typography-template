@@ -4,7 +4,23 @@ var h2Index = -1;
 var h3Index = -1;
 var h4Index = -1;
 var pIndex = -1;
+var navHidden = true;
 
+$('#btNav').click(function(e) {
+    $('#nav').slideToggle("fast");
+    if ( navHidden === true) {
+        $(this).css("bottom", "240px");
+        $(this).html("Save");
+        navHidden = false;
+    } else {
+        $(this).css("bottom", "40px");
+        $(this).html("h1 — p");
+        navHidden = true;
+    }
+    e.preventDefault();
+});
+
+// Weight function
 $(function() {
 
   $('#h1').on('click', function(e) {
@@ -72,23 +88,73 @@ $(function() {
     $("p").removeClass().addClass(weights[pIndex]);
     $("#pText").html(weights[pIndex]);
 
+    $('h1').css('font-size', '');
+    $("#h1Input").val("48");
+    $('h2').css('font-size', '');
+    $("#h2Input").val("40");
+    $('h3').css('font-size', '');
+    $("#h3Input").val("32");
+    $('h4').css('font-size', '');
+    $("#h4Input").val("24");
+    $('p').css('font-size', '');
+    $("#pInput").val("16");
+
     e.preventDefault();
   });
 });
 
-var navHidden = true;
+//Size function
+$("#h1Input").on("click", function(e) {
+    if ($(this).val() === "48") {
+        $(this).val("");
+    }
+    e.preventDefault();
+});
 
-$(document).ready(function() {
-    $('#btNav').click(function() {
-        $('#nav').slideToggle("fast");
-        if ( navHidden === true) {
-            $(this).css("bottom", "140px");
-            $(this).html("Save");
-            navHidden = false;
-        } else {
-            $(this).css("bottom", "40px");
-            $(this).html("h1 — p");
-            navHidden = true;
-        }
-    });
+$('#h1Input').on('keyup', function() {
+    $('h1').css('font-size', $(this).val() + "px");
+});
+
+$("#h2Input").on("click", function(e) {
+    if ($(this).val() === "40") {
+        $(this).val("");
+    }
+    e.preventDefault();
+});
+
+$('#h2Input').on('keyup', function() {
+    $('h2').css('font-size', $(this).val() + "px");
+});
+
+$("#h3Input").on("click", function(e) {
+    if ($(this).val() === "32") {
+        $(this).val("");
+    }
+    e.preventDefault();
+});
+
+$('#h3Input').on('keyup', function() {
+    $('h3').css('font-size', $(this).val() + "px");
+});
+
+$("#h4Input").on("click", function(e) {
+    if ($(this).val() === "24") {
+        $(this).val("");
+    }
+    e.preventDefault();
+});
+
+$('#h4Input').on('keyup', function() {
+    $('h4').css('font-size', $(this).val() + "px");
+});
+
+$("#pInput").on("click", function(e) {
+    if ($(this).val() === "16") {
+        $(this).val("");
+    }
+    e.preventDefault();
+});
+
+$('#pInput').on('keyup', function() {
+    $('p').css('font-size', $(this).val() + "px");
 });
