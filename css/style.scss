@@ -68,6 +68,7 @@ $txtRootSize: 16px;
 $lineHeight: auto;
 $marginBottom: 1.25rem;
 $marginSection: 3rem;
+$gridlength: 960px;
 
 :root {
     font-size: $txtRootSize;
@@ -80,7 +81,7 @@ body {
 }
 
 main {
-    max-width: 960px;
+    max-width: $gridlength;
     color: $primaryTxt;
     margin-right: auto;
     margin-left: auto;
@@ -154,8 +155,153 @@ a:active {
     color: $accentColor !important;
 }
 
-// Menu
+//Main
+section {
+    padding: 0 10%;
+    margin-bottom: $marginSection;
+}
+
+.crumb {
+    list-style: none;
+    margin-bottom: $marginBottom;
+    padding-top: 3rem;
+
+    li {
+        padding: 0 .5rem 0 0;
+        display:inline-block;
+
+        a,
+        a:link,
+        a:visited {
+            color: $primaryTxt;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active {
+         text-decoration: underline;
+        }
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    list-style: none;
+
+    .bullet {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: $marginBottom;
+
+        p {
+            margin: 0;
+        }
+
+        &:after {
+            content: '';
+            height: .3em;
+            width: .3em;
+            background: $primaryTxt;
+            display: block;
+            position: absolute;
+            transform: rotate(45deg);
+            top: .6em;
+            left: .2em;
+        }
+    }
+}
+
+// Nav
 nav {
+    width: 100%;
+    background: black;
+    color: white;
+
+    .masterhead {
+        width: $gridlength;
+    }
+
+    section,
+    p {
+        margin: 0;
+    }
+
+    #logo {
+        width: 60px;
+        padding: 10px;
+    }
+}
+
+// Forms
+p label {
+    color: $secondaryTxt;
+    display: block;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid $secondaryTxt;
+    height: 44px;
+    width: 100%;
+    transition: border 0.3s;
+    text-align: center;
+}
+
+input:focus,
+input.focus {
+    border-bottom: solid 1px $accentColor;
+    outline: none;
+}
+
+// Elements
+.img {
+  width: 100%;
+  padding-bottom: 50%;
+  margin-bottom: .5rem;
+  background: $disableTxt;
+}
+
+.comparison {
+    padding-top: $marginBottom;
+
+    .listColumn {
+        margin-bottom: $marginBottom;
+
+        .list {
+            border: none;
+            border-bottom: 1px solid $disableTxt;
+            list-style: none;
+            padding: 1rem;
+            margin: 0 .5rem;
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+
+// Footer
+footer {
+    background-color: black;
+    color: white;
+    padding: 5% 0;
+
+    ul {
+        list-style: none;
+
+        li {
+            border: none !important;
+            padding: 0 1rem;
+        }
+    }
+}
+
+// Menu
+#nav {
     display: none;
     width: 100%;
     background: white;
@@ -191,8 +337,8 @@ nav {
 }
 #btNav {
     @extend #button;
-    border: 2px solid blue !important;
-    background: blue !important;
+    border: 2px solid $accentColor !important;
+    background: $accentColor !important;
     padding: 10px 10px !important;
     width: auto;
     position: fixed;
@@ -200,105 +346,13 @@ nav {
     right: 40px;
 }
 #btNav:hover {
-    border: 2px solid blue !important;
+    border: 2px solid $accentColor !important;
     background: white !important;
     border-radius: 2px !important;
-    color: blue !important;
+    color: $accentColor !important;
 }
 
 .btReset {
     font-size: 2rem;
     color: blue
-}
-
-//Main
-section {
-    padding: 0 10%;
-    margin-bottom: $marginSection;
-}
-
-.crumb {
-    list-style: none;
-    margin-bottom: $marginBottom;
-    padding-top: 3rem;
-
-    li {
-        display:inline-block;
-        padding-right: 10px;
-
-        a,
-        a:link,
-        a:visited {
-            color: $primaryTxt;
-            text-decoration: none;
-        }
-
-        a:hover,
-        a:active {
-         text-decoration: underline;
-        }
-    }
-}
-
-ul {
-    margin: 0;
-    padding: 0 0 1.25rem 0;
-
-    .list {
-        border: none;
-        border-bottom: 1px solid $disableTxt;
-        list-style: none;
-        padding: 1rem;
-    }
-
-    li:last-child {
-        border: none;
-    }
-}
-
-// Form
-p label {
-    color: $secondaryTxt;
-    display: block;
-}
-
-input {
-    border: none;
-    border-bottom: 1px solid $secondaryTxt;
-    height: 44px;
-    width: 100%;
-    transition: border 0.3s;
-}
-
-input:focus,
-input.focus {
-    border-bottom: solid 1px $accentColor;
-    outline: none;
-}
-
-// Elements
-.img {
-  width: 100%;
-  padding-bottom: 50%;
-  margin-bottom: .5rem;
-  background: $disableTxt;
-}
-
-.comparison {
-    padding-top: $marginBottom;
-}
-
-footer {
-    background-color: black;
-    color: white;
-    padding: 5% 0;
-
-    ul {
-        list-style: none;
-
-        li {
-            border: none !important;
-            padding: 0 1rem;
-        }
-    }
 }

@@ -124,51 +124,6 @@ a:active {
   border-radius: 2px !important;
   color: #4DC1C4 !important; }
 
-nav {
-  display: none;
-  width: 100%;
-  background: white;
-  border: none;
-  border-top: 1px solid #A4A4A4;
-  position: fixed;
-  bottom: 0;
-  padding: 10px;
-  text-align: center;
-  margin: 0 auto; }
-  nav ul {
-    list-style: none; }
-    nav ul li {
-      padding: 10px;
-      width: 50px;
-      display: inline-block; }
-      nav ul li a,
-      nav ul li a:link,
-      nav ul li a:visited {
-        color: #0f0f0f;
-        text-decoration: none; }
-      nav ul li a:hover,
-      nav ul li a:active {
-        background: yellow; }
-
-#btNav {
-  border: 2px solid blue !important;
-  background: blue !important;
-  padding: 10px 10px !important;
-  width: auto;
-  position: fixed;
-  bottom: 40px;
-  right: 40px; }
-
-#btNav:hover {
-  border: 2px solid blue !important;
-  background: white !important;
-  border-radius: 2px !important;
-  color: blue !important; }
-
-.btReset {
-  font-size: 2rem;
-  color: blue; }
-
 section {
   padding: 0 10%;
   margin-bottom: 3rem; }
@@ -178,8 +133,8 @@ section {
   margin-bottom: 1.25rem;
   padding-top: 3rem; }
   .crumb li {
-    display: inline-block;
-    padding-right: 10px; }
+    padding: 0 .5rem 0 0;
+    display: inline-block; }
     .crumb li a,
     .crumb li a:link,
     .crumb li a:visited {
@@ -191,14 +146,38 @@ section {
 
 ul {
   margin: 0;
-  padding: 0 0 1.25rem 0; }
-  ul .list {
-    border: none;
-    border-bottom: 1px solid #A4A4A4;
-    list-style: none;
-    padding: 1rem; }
-  ul li:last-child {
-    border: none; }
+  padding: 0;
+  list-style-position: inside;
+  list-style: none; }
+  ul .bullet {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.25rem; }
+    ul .bullet p {
+      margin: 0; }
+    ul .bullet:after {
+      content: '';
+      height: .3em;
+      width: .3em;
+      background: #0f0f0f;
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      top: .6em;
+      left: .2em; }
+
+nav {
+  width: 100%;
+  background: black;
+  color: white; }
+  nav .masterhead {
+    width: 960px; }
+  nav section,
+  nav p {
+    margin: 0; }
+  nav #logo {
+    width: 60px;
+    padding: 10px; }
 
 p label {
   color: #747474;
@@ -209,7 +188,8 @@ input {
   border-bottom: 1px solid #747474;
   height: 44px;
   width: 100%;
-  transition: border 0.3s; }
+  transition: border 0.3s;
+  text-align: center; }
 
 input:focus,
 input.focus {
@@ -224,6 +204,16 @@ input.focus {
 
 .comparison {
   padding-top: 1.25rem; }
+  .comparison .listColumn {
+    margin-bottom: 1.25rem; }
+    .comparison .listColumn .list {
+      border: none;
+      border-bottom: 1px solid #A4A4A4;
+      list-style: none;
+      padding: 1rem;
+      margin: 0 .5rem; }
+      .comparison .listColumn .list:last-child {
+        border: none; }
 
 footer {
   background-color: black;
@@ -234,3 +224,48 @@ footer {
     footer ul li {
       border: none !important;
       padding: 0 1rem; }
+
+#nav {
+  display: none;
+  width: 100%;
+  background: white;
+  border: none;
+  border-top: 1px solid #A4A4A4;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto; }
+  #nav ul {
+    list-style: none; }
+    #nav ul li {
+      padding: 10px;
+      width: 50px;
+      display: inline-block; }
+      #nav ul li a,
+      #nav ul li a:link,
+      #nav ul li a:visited {
+        color: #0f0f0f;
+        text-decoration: none; }
+      #nav ul li a:hover,
+      #nav ul li a:active {
+        background: yellow; }
+
+#btNav {
+  border: 2px solid #4DC1C4 !important;
+  background: #4DC1C4 !important;
+  padding: 10px 10px !important;
+  width: auto;
+  position: fixed;
+  bottom: 40px;
+  right: 40px; }
+
+#btNav:hover {
+  border: 2px solid #4DC1C4 !important;
+  background: white !important;
+  border-radius: 2px !important;
+  color: #4DC1C4 !important; }
+
+.btReset {
+  font-size: 2rem;
+  color: blue; }

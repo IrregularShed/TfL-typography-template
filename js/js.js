@@ -1,16 +1,16 @@
 var weights = ["L","R","M","H","T"];
-var h1Index = -1;
-var h2Index = -1;
-var h3Index = -1;
-var h4Index = -1;
-var pIndex = -1;
+var h1Index = 0;
+var h2Index = 0;
+var h3Index = 0;
+var h4Index = 0;
+var pIndex = 0;
 var navHidden = true;
 
 $('#btNav').click(function(e) {
     $('#nav').slideToggle("fast");
     if ( navHidden === true) {
-        $(this).css("bottom", "240px");
-        $(this).html("Save");
+        $(this).css("bottom", "300px");
+        $(this).html("Close");
         navHidden = false;
     } else {
         $(this).css("bottom", "40px");
