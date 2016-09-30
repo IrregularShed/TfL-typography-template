@@ -249,7 +249,7 @@ footer {
         text-decoration: none; }
       #nav ul li a:hover,
       #nav ul li a:active {
-        background: yellow; }
+        text-decoration: underline; }
 
 #btNav {
   border: 2px solid #4DC1C4 !important;
